@@ -157,3 +157,9 @@ main *{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.introduction p{
+  margin-top: 30px;
+  line-height: 2;
+  font-we
+}
