@@ -1,3 +1,25 @@
+.register_bg.active {
+  display: flex;
+  transition: all 0.5s ease;
+}
+.register_bg{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(114, 114, 114, 0.827);
+  z-index: 2;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  & .register{
+    width: 40%;
+    height: 90vh;
+    background-color: #fff;
+  }
+}
+
 main *{
   /* outline: 1px dotted red; */
   font-family: 'Poppins';
@@ -179,14 +201,77 @@ main *{
 
 /*----------------------------------------------------*/
 
+.discount_section *{
+  outline: 1px red dotted;
+}
+
+.discount_section{
+  width: 100%;
+  height: 300px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 30px 10%;
+  & .slide{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    & .discount_collection{
+      width: 3900px;
+      height: 100%;
+      display: flex;
+      transform: translateX(-1.33%);
+      justify-content: space-evenly;
+      & .discounts{
+        width: 15%;
+        height: 100%;
+        background-image: url(/images/com_desktop_656x292_273.webp);
+        position: relative;
+        & .discount_descriptions{
+          position: absolute;
+          color: #fff;
+          bottom: 20px;
+          left: 30px;
+        }
+      }
+    }
+  }
+
+}
+
+/*--------------------------------------------------------------*/
+
+.product_home *{
+  outline: 1px red dotted;
+}
+
 .product_home{
   outline: 1px red dotted;
   width: 100%;
-  height: 600px;
+  padding: 50px 5%;
+  height: 1500px;
   background-color: #fff;
   border-radius: 20px;
   margin-bottom: 5px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
+  gap: 5%;
+  & .products{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .product_content{
+      width: 70%;
+      height: 90%;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #e5e5e5;
+      & .product_img{
+        height: 50%;
+      }
+    }
+
+  }
 }

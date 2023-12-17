@@ -70,12 +70,51 @@
       </div>
     </section>
 
+    <section class="discount_section">
+      <div class="slide">
+        <div class="discount_collection">
+
+          <?php function display_discount($num)
+          { ?>
+            <div class="discounts <?php echo "discount$num" ?>">
+              <div class="discount_descriptions">
+                <h1>Up to 30% off</h1>
+                <p>Hello</p>
+              </div>
+            </div>
+          <?php }
+          for ($i = 1; $i <= 6; $i++) {
+            display_discount($i);
+          }
+          ?>
+
+
+        </div>
+      </div>
+    </section>
+
     <section class="product_home">
-      <?php function display()
+      <?php function display($class)
       { ?>
-        <p>Hello</p>
+        <div class="products">
+          <div class="product_content <?php echo $class; ?>">
+            <div class="product_img"></div>
+            <div class="product_description">
+              <h5>$ 215</h5>
+              <h1>BRAKE PADS</h1>
+              <p>Essential for safe breaking, these wear out over time and need regular replacements.</p>
+            </div>
+            <div class="buttons">
+              <a href="">Add To Cart</a>
+              <a href="">Detail</a>
+            </div>
+          </div>
+        </div>
       <?php }
-      display();
+      for ($i = 1; $i <= 9; $i++) {
+        display("content$i");
+      }
+      
       ?>
 
     </section>
