@@ -43,6 +43,11 @@ a{
   color: inherit;
 }
 
+input:focus{
+  border: none;
+  background-color: green;
+}
+
 .right{
   width: 50%;
 }

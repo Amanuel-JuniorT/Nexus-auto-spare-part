@@ -1,5 +1,6 @@
 .register_bg *{
   font-family: 'Poppins';
+  /* outline: 1px red dotted; */
 }
 .register_bg.active {
   display: flex;
@@ -16,7 +17,7 @@
   display: none;
   justify-content: center;
   align-items: center;
-  & img{
+  & >img{
     width: 50px;
     height: 50px;
     position: fixed;
@@ -29,6 +30,76 @@
     background-color: #fff;
     overflow-y: scroll;
     border-radius: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    & h1{
+      color: #870007;
+    }
+    & form{
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & input{
+        height: 40px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: none;
+        background-color: #D6CBCB;
+      }
+
+      & input[type=submit]{
+        background-color: #ff232e;
+        color: #fff;
+        margin: 15px 0;
+        font-size: 24px;
+      }
+    }
+
+    & .or{
+      width: 100%;
+      height: 2px;
+      margin-top: 10px;
+      background-color: #ff232e;
+      position: relative;
+    }
+
+    & .or::after{
+      content: 'OR';
+      font-size: 12px;
+      width: 30px;
+      height: 20px;
+      background-color: #ff232e;
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding-top: 1px;
+    }
+
+    & .medias{
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 30%;
+      margin-top: 50px;
+      & >img{
+        width: 40px;
+        height: 50px;
+      }
+    }
+
+    & p{
+      text-align: center;
+      & strong{
+        color: #ff232e;
+        text-decoration: underline;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
   }
 }
 
