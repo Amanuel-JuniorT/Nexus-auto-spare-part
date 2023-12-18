@@ -43,7 +43,7 @@ a{
   color: inherit;
 }
 
-input:focus{
+*input:focus-visible{
   border: none;
   background-color: green;
 }

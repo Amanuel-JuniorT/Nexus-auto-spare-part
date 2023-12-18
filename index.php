@@ -10,6 +10,69 @@
 </head>
 
 <body>
+  <div class="register_bg">
+    <img src="images/Cancel.png" alt="">
+    <div class="page">
+      <div class="signup_page">
+        <h1>Create Account</h1>
+        <form action="">
+          <div class="name">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+          </div>
+          <div class="email">
+            <label for="email">E-Mail</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="password">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+          </div>
+          <input type="submit" value="SIGN UP">
+        </form>
+        <!-- <div class="or"></div> -->
+        <div class="medias">
+          <img src="images/Facebook.png" alt="">
+          <img src="images/LinkedIn.png" alt="">
+          <img src="images/Google.png" alt="">
+        </div>
+        <p>Already a user? <strong class="switch-to-login">Log in</strong></p>
+
+      </div>
+
+      <div class="login_page">
+        <h1>Sign In</h1>
+        <form action="">
+          <div class="email">
+            <label for="email">User Name</label>
+            <input type="email" name="email" id="email">
+          </div>
+          <div class="password">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+          </div>
+          <input type="submit" value="LOG IN">
+        </form>
+        <!-- <div class="or"></div> -->
+        <div class="medias">
+          <img src="images/Facebook.png" alt="">
+          <img src="images/LinkedIn.png" alt="">
+          <img src="images/Google.png" alt="">
+        </div>
+        <p>Don't have an account? <strong class="switch-to-signup">Sign Up</strong></p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+
+  <!-- ------------------------------------------------------------------------------- -->
+
   <header>
     <nav>
       <div class="logo">
@@ -70,6 +133,7 @@
       </div>
     </section>
 
+
     <section class="discount_section">
       <div class="slide">
         <div class="discount_collection">
@@ -94,15 +158,15 @@
     </section>
 
     <section class="product_home">
-      <?php function display($class)
+      <?php function display($class, $price, $part, $description)
       { ?>
         <div class="products">
           <div class="product_content <?php echo $class; ?>">
             <div class="product_img"></div>
             <div class="product_description">
-              <h5>$ 215</h5>
-              <h1>BRAKE PADS</h1>
-              <p>Essential for safe breaking, these wear out over time and need regular replacements.</p>
+              <h5>$ <?php echo $price; ?></h5>
+              <h1><?php echo $part; ?></h1>
+              <p><?php echo $description; ?></p>
             </div>
             <div class="buttons">
               <a href="">Add To Cart</a>
@@ -111,14 +175,33 @@
           </div>
         </div>
       <?php }
-      for ($i = 1; $i <= 9; $i++) {
-        display("content$i");
+
+      include 'PHP/products.php';
+      $current = [];
+      foreach ($parts as $val) {
+        array_push($current, $val);
       }
-      
+
+      function picker(&$arr, $i)
+      {
+        $pickedIndex = array_rand($arr, 1);
+        $pickedPrice = $arr[$pickedIndex]['price'];
+        $pickedPart = $arr[$pickedIndex]['part'];
+        $pickedDescription = $arr[$pickedIndex]['info'];
+        $spliced = array_splice($arr, $pickedIndex, 1);
+        display("content$i", $pickedPrice, $pickedPart, $pickedDescription);
+      }
+
+
+      for ($i = 1; $i <= 9 && $i <= sizeof($parts); $i++) {
+        picker($current, $i);
+      }
+
       ?>
 
     </section>
   </main>
+
 </body>
 <script>
   // let tabs = document.querySelector('.tabs');
@@ -139,6 +222,8 @@
   //   })
   // }
 </script>
-<script src="script/scriptHome.js"></script>
+<script src="/script/scriptHome.js <?=filemtime('scriptHome.js')?>" defer></script>
+
+
 
 </html>
