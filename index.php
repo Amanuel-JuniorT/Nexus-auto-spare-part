@@ -21,12 +21,12 @@
             <input type="text" name="name" id="name">
           </div>
           <div class="email">
-            <label for="email">E-Mail</label>
-            <input type="email" name="email" id="email">
+            <label for="regemail">E-Mail</label>
+            <input type="email" name="email" id="regemail">
           </div>
           <div class="password">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password">
+            <label for="regpassword">Password</label>
+            <input type="password" name="password" id="regpassword">
           </div>
           <input type="submit" value="SIGN UP">
         </form>
@@ -87,7 +87,7 @@
           <li><a href="">Contact Us</a></li>
         </ul>
         <div class="account">
-          <button>LOG-IN</button>
+          <button onclick="display()">LOG-IN</button>
           <button>SIGN-UP</button>
         </div>
 
@@ -222,8 +222,22 @@
   //   })
   // }
 </script>
-<script src="/script/scriptHome.js <?=filemtime('scriptHome.js')?>" defer></script>
+<script src="/script/scriptHome.js <?= filemtime('scriptHome.js') ?>" defer></script>
+<script>
+  const login = document.querySelector('.login'),
+    signup = document.querySelector('.signup'),
+    loginPage = document.querySelector('.login_page'),
+    signupPage = document.querySelector('.signup_page'),
+    register_bg = document.querySelector('.register_bg'),
+    close_register = register_bg.querySelector('img'),
+    toLogin = document.querySelector('.switch-to-login'),
+    toSignup = document.querySelector('.switch-to-signup');
 
+  function display() {
+    register_bg.classList.add('active');
+    loginPage.classList.add('active');
+  }
+</script>
 
 
 </html>

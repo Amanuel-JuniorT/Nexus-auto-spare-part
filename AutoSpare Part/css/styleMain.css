@@ -271,11 +271,10 @@ main *{
   }
   
   & span{
-    right:5px;
-    width: auto;
-    text-align: center;
-    rotate: 90deg;
-    translate: -100% -50%;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #A00000;
   }
 
   & .catagory_lists{
@@ -319,7 +318,7 @@ main *{
 /*----------------------------------------------------*/
 
 .discount_section *{
-  /* outline: 1px red dotted; */
+  outline: 1px red dotted;
 }
 
 .discount_section{
@@ -329,60 +328,24 @@ main *{
   background-color: #fff;
   border-radius: 20px;
   padding: 30px 10%;
-  & >div{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    & >span{
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1;
-      font-size: 32px;
-      box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.25);
-      cursor: pointer;
-    }
-
-    & >span:first-child{
-      left: 0;
-      top: 50%;
-      translate: -50% -50%;
-      /* display: none; */
-    }
-
-    & >span:nth-child(2){
-      right: 0;
-      top: 50%;
-      translate: 50% -50%;
-    }
-
-  }
   & .slide{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    
     & .discount_collection{
-      width: 1950px;
+      width: 3900px;
       height: 100%;
       display: flex;
       transform: translateX(-1.33%);
       justify-content: space-evenly;
-      transition: all 1.5s ease;
       & .discounts{
-        width: 30%;
+        width: 15%;
         height: 100%;
         background-image: url(/images/com_desktop_656x292_273.webp);
         position: relative;
         & .discount_descriptions{
           position: absolute;
-          color: #000;
-          /* color: #fff; */
+          color: #fff;
           bottom: 20px;
           left: 30px;
         }

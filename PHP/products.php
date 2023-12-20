@@ -1,13 +1,16 @@
 <?php
-  $parts = [
-            ['price'=> 215, 'part'=>'BRAKE PADS', 'info'=>"Essential for safe breaking, these wear out over time and need regular replacements."], 
-            ['price'=> 35, 'part'=>'AIR FILTERS', 'info'=>"Crucial for maintaining engine health by filtering out dust and debris from entering the engine"],
-            ['price'=> 5, 'part'=>'SPARK PLUGS', 'info'=>"Integral for starting the combustion process in the engine often requiring perioic replacement."],
-            ['price'=> 44, 'part'=>'OIL FILTERS', 'info'=>"Necessary for keeping the engine oil clean, ensuring proper lubrication for the engine's moving parts."],
-            ['price'=> 240, 'part'=>'CAR BATTERIES', 'info'=>"vital for powering electrical systems in vehicles, they often require replacement after a few  ."],
-            ['price'=> 215, 'part'=>'TIMING BELT/chain', 'info'=>"Critical for the engine's valve. Regular replacement is essential to prevent potential damage. "],
-          ];
-  $brakes = [];
+$parts = [
+  ['price' => 215, 'part' => 'BRAKE PADS', 'info' => "Essential for safe breaking, these wear out over time and need regular replacements."],
+  ['price' => 35, 'part' => 'AIR FILTERS', 'info' => "Crucial for maintaining engine health by filtering out dust and debris from entering the engine"],
+  ['price' => 5, 'part' => 'SPARK PLUGS', 'info' => "Integral for starting the combustion process in the engine often requiring perioic replacement."],
+  ['price' => 44, 'part' => 'OIL FILTERS', 'info' => "Necessary for keeping the engine oil clean, ensuring proper lubrication for the engine's moving parts."],
+  ['price' => 240, 'part' => 'CAR BATTERIES', 'info' => "vital for powering electrical systems in vehicles, they often require replacement after a few  ."],
+  ['price' => 240, 'part' => 'CAR BATTERIES', 'info' => "vital for powering electrical systems in vehicles, they often require replacement after a few  ."],
+  ['price' => 240, 'part' => 'CAR BATTERIES', 'info' => "vital for powering electrical systems in vehicles, they often require replacement after a few  ."],
+  ['price' => 240, 'part' => 'CAR BATTERIES', 'info' => "vital for powering electrical systems in vehicles, they often require replacement after a few  ."],
+  ['price' => 24000, 'part' => 'CAR dxBATTERIES', 'info' => "vital for powering electrical systems in vehicles, they often require replacement after a few  ."]
+];
+$brakes = [];
 
 /*
   foreach($parts as $val){

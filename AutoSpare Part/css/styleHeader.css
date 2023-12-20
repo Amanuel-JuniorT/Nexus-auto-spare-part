@@ -123,27 +123,3 @@ a{
 }
 
 /* ---------------------------------------------------------- */
-
-footer *{
-  outline: 1px red dotted;
-}
-
-footer{
-  width: 100%;
-  height: 200px;
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 30px 5%;
-  & .footer{
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    & .footer>div{
-      height: 100%;
-      & h3{
-        margin-bottom: 20px;
-      }
-    }
-  }
-}
