@@ -17,12 +17,12 @@ items.forEach(item =>{
 })
 
 let count = 0;
-if(count == 0){
-  dis_prev.style.display = "none";
-}
- else if(count == 1){
-  dis_next.style.display = "none";
- }
+// if(count == 0){
+//   dis_prev.style.display = "none";
+// }
+//  else if(count == 1){
+//   dis_next.style.display = "none";
+//  }
 
  dis_prev.addEventListener('click',()=>{
   if(count !=0){
