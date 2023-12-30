@@ -1,5 +1,132 @@
-.body{
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Lato&family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Lato:wght@900&family=Libre+Baskerville&family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Lato:wght@300&family=Libre+Baskerville&family=Poppins:wght@300;500&display=swap');
+
+/* .body{
   background: linear-gradient(180deg, #FFF 0%, #CBCBCB 100%);
   height: 100%;
   width: 100%;
+} */
+
+
+*{
+  --background: #dfdfdf;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  list-style: none;
+  outline: 1px red dotted;
 }
+body{
+  /* position: relative; */
+  /* height: auto; */
+  overflow-x: scroll;
+  width: 100%;
+  background-color: var(--background);
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+.side-bar{
+  float: left;
+  width: 300px;
+  height: 100vh;
+  background-color: white;
+  padding: 10px;
+  border-radius: 0 20px 20px 0;
+  overflow-y: scroll;
+}
+
+.side-bar::-webkit-scrollbar{
+  display: none;
+}
+
+.return{
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.return>span{
+  background-image: url(../images/Go\ Back.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+}
+
+.logo{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.profile-info{
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0px 20px 15px;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  /* height: 150px; */
+}
+
+.profile-pic{
+  /* background-color: black; */
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 32px;
+}
+
+.profile-name{
+  padding: 10px;
+}
+
+main{
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  width: calc(100vw - 305px);
+  height: 100vh;
+  border-radius: 20px 0 0 20px;
+  overflow-y: scroll;
+  
+}
+
+.main::-webkit-scrollbar{
+  /* border-radius: 10px; */
+  background: #dfdfdf ;
+  width: 10px;
+}
+
+.main::-webkit-scrollbar-thumb{
+  background-color: #ff232e;
+  border-radius: 10px;
+}
+
+.header{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+
+.header ul{
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
